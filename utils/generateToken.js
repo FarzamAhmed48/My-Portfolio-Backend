@@ -4,7 +4,9 @@ export const generateToken=async(user,message,statusCode,res)=>{
         return;
     }
     res.status(statusCode).cookie("token",token,{
-        httpOnly:true
+        httpOnly:true,
+        sameSite:"None",
+        secure:true,
     }).json({
         success:true,
         message,
