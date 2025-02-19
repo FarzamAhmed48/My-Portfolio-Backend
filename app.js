@@ -14,7 +14,7 @@ import projectRouter from "./routes/project.route.js"
 const app=express()
 dotenv.config()
 app.use(cors({
-    origin:[process.env.PORTFOLIO_URL,process.env.DASHBOARD_URL],
+    origin:[process.env.PORTFOLIO_URL,process.env.DASHBOARD_URL,"http://localhost:5173"],
     methods:["GET", "POST", "DELETE","PUT"],
     credentials:true
 }))
